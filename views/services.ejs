@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> <%= title %>  </title>
+
+    <!-- =============== Bootstrap Core CSS =============== -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <!-- =============== fonts awesome =============== -->
+    <link rel="stylesheet" href="/font/css/font-awesome.min.css" type="text/css">
+    <!-- =============== Plugin CSS =============== -->
+    <link rel="stylesheet" href="/css/animate.min.css" type="text/css">
+    <!-- =============== Custom CSS =============== -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!-- =============== Owl Carousel  =============== -->
+    <link href="/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	 <link rel="stylesheet" href="/css/isotope-docs.css" media="screen">
+	  <link rel="stylesheet" href="/css/baguetteBox.css">
+    
+
+    <style>
+        /* TABLETS DEVICES */
+        @media only screen and (min-width : 768px){
+            .brandname{
+                display: none;
+            }
+            .brandname:hover{
+                text-decoration: none;
+            }
+            .logoimg{
+                width:5rem;
+                height: 5rem;
+            }
+            .services{
+                margin-top: 5%;
+            }
+            .title{
+                margin-top: 15%;
+            }
+            .val:hover{
+                color: gold;
+            }
+            .clientlogo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }     
+            #blog::before {
+                left: -90px;
+                top: -40px;
+            }          
+            .top-line{
+                margin-top: -5%;
+            }
+            .blog-subtitle{
+                position: absolute;
+                margin-top: -8%;
+                margin-left: 15%;
+            }
+        }
+        /* DESKTOP DEVICES */
+        @media only screen and (min-width : 992px){
+            .brandname{
+                margin-top: 20%;
+                font-size : 1.1rem;
+                display : block;
+            }
+            .brandname:hover{
+                text-decoration: none;
+            }
+            .services{
+                margin-top: 0;
+            }
+            .brandname:hover, .brandname:focus, .brandname:active{
+                text-decoration: underline;
+                color: inherit;
+            }
+            .aboutimg{
+                width : 45vw;
+                height : 80vh
+            }
+            .services{
+                margin-top: 0;
+            }
+            .title{
+                margin-top: 8%;
+            }
+            .val:hover{
+                color: gold;
+            }
+            .clientlogo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }     
+            #blog::before {
+                left: -60px;
+                top: -120px;
+            }          
+            .top-line{
+                margin-top: -1%;
+            }
+            #blog{
+                padding-bottom: 5%;
+            }
+            .blog-subtitle{
+                position: absolute;
+                margin-top: -5%;
+                margin-left: 28%;
+            }
+        }
+
+        /* MOBILE DEVICES */
+        @media only screen and (max-width : 600px){
+            .brandname{
+                margin-top: 12%;
+                padding-left: 50%;
+            }
+            .brandname:hover{
+                text-decoration: none;
+            }
+            .logoimg{
+                height: 45px;
+                width: 100%;
+            }
+            .logoimgpara{
+                position: absolute;
+                padding-top: 4%;
+            }
+            .services{
+                margin-top: 5%;
+            }
+            .wcu{
+                margin-bottom: 10%;
+            }
+            .indicator{
+                margin-left: 6%;
+            }
+            .val:hover{
+                color: gold;
+            }
+            .clientlogo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -5%;
+                height: 300px;
+            }
+            .client-logo-div{
+                margin-top: 1%;
+            }   
+            #blog::before {
+                left: -60px;
+                top: -160px;
+            }          
+            .blog-title{
+                padding-bottom: 15px;
+            }
+            .top-line{
+                margin-top: 2%;
+            }
+            .bottom-line{
+                display: none
+            }
+        }
+
+
+
+    </style>
+	
+</head>
+
+<body>
+    <!-- =============== Preloader =============== -->
+    <div id="preloader">
+        <div id="loading">
+		<img width="256" height="32" src="/img/loading-cylon-red.svg">	
+        </div>
+    </div>
+    <!-- =============== nav =============== -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="background-color: #000;">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- BUSINESS LOGO -->
+                    <div style="display: flex;">
+                        <p class="logoimgpara"><a class="navbar-brand" href="/"><img class="logoimg" src="/img/logo.png"/></a></p>
+                        <a href="/"><p class="brandname" style="color: gold;" > NOVIT&nbsp;TECHNOLOGIES</p></a>
+                    </div>
+                    
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+						<li>
+                            <a class="page-scroll" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/Services">Services</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/team">Team</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- =============== navbar-collapse =============== -->
+
+            </div>
+        </div>
+        <!-- =============== container-fluid =============== -->
+    </nav>
+
+<!-- =============== Services =============== -->
+<section id="Services" class="services title">
+    <!-- =============== container =============== -->
+    <div class="container">            
+        <div class="row">
+            <h2>OUR SERVICES</h2>
+            <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInLeft animated" data-wow-delay=".5s">
+             <img src="/img/blog1.jpg" class="img-left"/>               
+              </div>     
+            <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInRight animated" data-wow-delay=".5s">
+               <!--start tabs-->
+            <div class="tabs tabs-main">
+              <ul class="nav nav-tabs" style="font-weight: bold;">
+                <li class="active"><a href="#one" data-toggle="tab" class="val">General</a></li>
+                <li><a href="#two" data-toggle="tab" class="val">Development</a></li>
+                <li><a href="#three" data-toggle="tab" class="val">Maintenance</a></li>
+              </ul>
+              <div class="tab-content">
+
+                  <!--Start Tab Item #1 -->
+                  <div class="tab-pane in active" id="one">
+                      <p>Development of websites, web apps and mobile apps products and services has never been more fulfulling to clients</p>
+                      <p>People are always on the lookout for quality products and services that comes with remarkable cost effective solutions, these are one of the qualities we look forward to portray in the industry</p>
+                      <h4 style="text-align: left;">Some of our great features and qualities are</h4>
+                      <ul style="text-align: left;">
+                          <li>Responsive Design</li>
+                          <li>24/7 Customer Support</li>
+                          <li>Secure Websites & App</li>
+                          <li>Free Consulting & Advisory</li>
+                          <li>Free Business Website Content Writing Offer For Clients</li>
+                          <li>Free Website Maintenance For Clients</li>
+                          <li>99.9% Website Uptime (Highest You Can Get)</li>
+                          <li>Fast Delivery</li>
+                          <li>Free Business Emails For Clients</li>
+                      </ul>
+                      <p>We offer to save you the stress of what content to write for your business website in part or in full as many clients have had similar problems with this in the past</p>
+                      <p>Got a great innovative idea? <button class="btn btn-lg" style="background-color: gold;"><a href="/contact" class="cta" style="color: gray;">Send a Message</a></button></p>
+                    </div>
+                    <!-- End Tab -->
+                    
+                    <!--Start Tab Item #2 -->
+                    <div class="tab-pane" id="two">
+                        <p>Thoughts, Ideas or Imaginations can be conjured into products or services for the satisfaction of our clients</p>
+                        <p>Our development process is carefully designed and planned out by professionals who are zealous and are willing to give the best</p>
+                        <p>Innovative idea softwares are also developed by our team of experts, with soothing relation and support with clients on the scope of the idea for best development processes and testing with zero cost incurred</p>
+                        <p>Got a great innovative idea? <button class="btn btn-lg" style="background-color: gold;"><a href="/contact" class="cta" style="color: gray;">Send a Message</a></button></p>
+                    </div>
+                    <!-- End Tab -->
+                    
+                    <!--Start Tab Item #3 -->
+                    <div class="tab-pane" id="three">
+                        <p>We know how unavailability of a business channel can affect business in many ways, from revenue to credibilty so we make sure your website has zero downtime, meaning your business never closes!</p>
+                        <p>Our clients enjoy free website maintenance and monitoring putting your mind at rest to focus on other important aspect of your business as we ensure your website is always available 24/7 which makes you available to customers anytime! anyday!</p>
+                        <p>We also do software maintenance services for existing softwares, bug fixes, crashes and optimization, part or total in-transfer of existing softwares</p>
+                        <p>Got a great innovative idea? <button class="btn btn-lg" style="background-color: gold;"><a href="/contact" class="cta" style="color: gray;">Send a Message</a></button></p>
+                    </div>
+                    <!-- End Tab -->
+
+              </div>
+          </div>
+        </div>
+       <!-- End Tabs-->
+              </div>
+
+              
+             
+        </div>
+    </div>   
+    <!-- =============== container end =============== -->		
+</section>	
+
+
+<!-- =============== for box =============== -->		
+<section class="for-box">
+ <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 wow rotateInDownLeft animated" data-wow-delay=".1s">
+            <div class="for-box-crecl indicator">
+                <i class="fa fa-home"></i>
+            </div>
+            <div class="clr1">				
+            <h2>
+                WEBSITE<br/>DESIGN
+            </h2>
+            </div>
+            <div class="wbox">
+                <strong>sorem ipsum </strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac vehicula leo dulam 
+nullam rhoncus tortor at dignissim vehicula.</p>
+                <a href="#" class="clr1-a">+</a>
+            </div>
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInDown animated" data-wow-delay=".2s">
+            <div class="for-box-crecl indicator">
+                <i class="fa fa-code"></i>
+            </div>
+            <div class="clr2">				
+            <h2>
+                WEB APP<br/>DEVELOPMENT
+            </h2>
+            </div>
+            <div class="wbox">
+                <strong>sorem ipsum </strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac vehicula leo dulam 
+nullam rhoncus tortor at dignissim vehicula.</p>
+                <a href="#" class="clr2-a">+</a>
+            </div>
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 wow rotateInDownRight animated" data-wow-delay=".3s">
+            <div class="for-box-crecl indicator">
+                <i class="fa fa-rocket"></i>
+            </div>
+            <div class="clr3">				
+            <h2>
+                MOBILE APP<br/>DEVELOPMENT
+            </h2>	
+            </div>
+            <div class="wbox">
+                <strong>sorem ipsum </strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac vehicula leo dulam 
+nullam rhoncus tortor at dignissim vehicula.</p>
+                <a href="#" class="clr3-a">+</a>
+            </div>
+        
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 wow rotateInDownLeft animated" data-wow-delay=".4s">
+            <div class="for-box-crecl indicator">
+                <i class="fa fa-wifi"></i>
+            </div>
+            <div class="clr4">				
+            <h2>
+                DIGITAL<br/>MARKETING
+            </h2>
+            </div>
+            <div class="wbox">
+                <strong>sorem ipsum </strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac vehicula leo dulam 
+nullam rhoncus tortor at dignissim vehicula.</p>
+                <a href="#" class="clr4-a">+</a>
+            </div>
+            
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInUp animated" data-wow-delay=".2s">
+            <div class="for-box-crecl indicator">
+                <i class="fa fa-code"></i>
+            </div>
+            <div class="clr2">				
+            <h2>
+                CONSULTING<br/> AND ADVISORY
+            </h2>
+            </div>
+            <div class="wbox">
+                <strong>sorem ipsum </strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac vehicula leo dulam 
+nullam rhoncus tortor at dignissim vehicula.</p>
+                <a href="#" class="clr2-a">+</a>
+            </div>
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 wow rotateInDownRight animated" data-wow-delay=".1s">
+            <div class="for-box-crecl indicator">
+                <i class="fa fa-home"></i>
+            </div>
+            <div class="clr1">				
+            <h2>
+                GRAPHICS<br/>DESIGN
+            </h2>
+            </div>
+            <div class="wbox">
+                <strong>sorem ipsum </strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac vehicula leo dulam 
+nullam rhoncus tortor at dignissim vehicula.</p>
+                <a href="#" class="clr1-a">+</a>
+            </div>
+            
+        </div>
+    </div>
+ </div>
+</section>
+
+<!-- =============== Counter =============== -->
+<section class="counter">
+    <!-- =============== container =============== -->
+    <div class="container">            
+        <div class="row">
+        <div class="title">
+            <h2 style="margin-top: -10%;">Why Choose Us</h2>				
+            </div>
+         <div class="col-xs-12 col-sm-2 col-md-2 wow fadeInUp animated why-choose-us" data-wow-delay=".1s">
+                        <i class="fa fa-clock-o size"></i><br/><br/>
+
+                        <span>Free Consultation & Advisory Service</span>
+              </div>   
+           <div class="col-xs-12 col-sm-2 col-md-2 wow fadeInUp animated why-choose-us" data-wow-delay=".2s">
+                        <i class="fa fa-coffee size"></i><br/><br/>
+
+                        <span>Cost Effective & Full Satisfaction</span>
+              </div>
+               <div class="col-xs-12 col-sm-2 col-md-2 wow fadeInUp animated why-choose-us" data-wow-delay=".3s">
+                        <i class="fa fa-trophy size"></i><br/><br/>
+
+                        <span>Secure & Quality Products & Services</span>
+              </div>
+               <div class="col-xs-12 col-sm-2 col-md-2 wow fadeInUp animated why-choose-us" data-wow-delay=".4s">
+                        <i class="fa fa-code size"></i><br/><br/>
+
+                        <span>SEO Strategy & Design</span>
+              </div>
+               <div class="col-xs-12 col-sm-2 col-md-2 wow fadeInUp animated why-choose-us" data-wow-delay=".5s">
+                        <i class="fa fa-globe size"></i><br/><br/>
+
+                        <span>24/7 Support & Post Delivery Support</span>
+              </div>
+               <div class="col-xs-12 col-sm-2 col-md-2 wow fadeInUp animated" data-wow-delay=".6s">
+                        <i class="fa fa-rocket size"></i><br/><br/>
+
+                        <span>Free Technical Cost Innovative Idea Development</span>
+              </div>  
+        </div>
+    </div>   
+    <!-- =============== container end =============== -->		
+</section>	
+
+<section id="blog" class="">
+    <div class="title blog-title" >
+        <h2>What Our Clients <br> Say</h2>				
+    </div>
+    <h4 class="blog-subtitle">Meet some of our lovely, passionate, positive clients.</h4><br>
+        <hr style="width: 50%;" class="top-line">
+    <!-- =============== container =============== -->
+    <div id="owl-demo" class="owl-carousel header1 client-logo-div">
+        
+        <div class="clientlogo">
+            <div class="col-xs-12 col-sm-6 col-md-6 clientlogo">
+                <h3>I'm impressed by the effective delivery with all the implementation involved. Great work!<br><br><br> <span style="font-style: italic; font-size: 0.8rem;">~ Alhaji Kamor ~</span></h3>
+            </div>            
+        </div>
+        
+        <div class="clientlogo">
+            <div class="col-xs-12 col-sm-6 col-md-6 clientlogo">
+                <h3>See recommendations ooooo... This is the second chinese partner to give kudos to our company's website... Everyday I open the site, I feel happy myself... God bless you <br><br><br> <span style="font-style: italic; font-size: 0.8rem;">~ Mr Owoeye ~</span></h3>
+
+            </div>            
+        </div>
+        
+        <div class="clientlogo">
+            <div class="col-xs-12 col-sm-6 col-md-6 clientlogo">
+                <h3>The emails I receive through my website has really helped my business...the ease of accessing the messages is amazing..., thanks once again for that way you made it easy<br><br><br> <span style="font-style: italic; font-size: 0.8rem;">~ Miss Oburogo ~</span></h3>
+            </div>            
+        </div>
+        
+    </div>	
+    <!-- =============== container end =============== -->	
+
+    <hr style="width: 50%; margin-top: -7%;" class="bottom-line">
+</section>	
+
+
+<%- include('./partials/footer') %> 
