@@ -32,9 +32,8 @@ router.get('/view/:id', async (req, res) => {
         data : singleMessage
     })
     } catch (error) {
-      console.log(error)  
-    }
-})
+        res.redirect('../error!')
+}})
 
 router.delete('/delete/:id', async (req, res) => {
     await Message.findByIdAndDelete(req.params.id)
