@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const homeRoutes = require('./routes/home.routes')
-const messagesRoutes = require('./routes/messages.routes')
 const mongoose = require('mongoose')
 const path = require('path')
 const methodOverride = require('method-override')
@@ -23,7 +22,6 @@ mongoose.connect('mongodb://localhost:27017/NovitTechnologies', {
 app.use(express.static(path.join(__dirname, 'assets')))
 
 app.use('/', homeRoutes)
-app.use('/messages', messagesRoutes)
 
 const PORT = process.env.PORT
 

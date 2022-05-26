@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const nodemailer = require('nodemailer')
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -27,6 +28,40 @@ router.get('/services', (req, res) => {
 router.get('/contact', (req, res) => {
     res.render('contact', {
         title : 'Contact Us'
+    })
+})
+
+router.post('/email', (req, res) => {
+    console.log(req.body)
+
+    const transporter = nodemailer.createTransport({
+        service : 'gmail',
+        port : 25,
+        secure : true,
+        logger : true,
+        debug : true,
+        secureConnection : false,
+        auth : {
+            user : 'detunjinov@gmail.com',
+            pass : '08139589883'
+        },
+        tls : {rejectAuthorized : true}
+    })
+
+    const mailOptions = {
+        from : req.body.email,
+        to : 'detunjinov@gmail.com',
+        subject : `Message from ${req.body.email} : ${req.body.subject}`,
+        text : req.body.message
+    }
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error){
+            console.log(error)
+        }else{
+            console.log('Email sent : ' + info.response)
+            res.redirect('/contact')
+        }
     })
 })
 
