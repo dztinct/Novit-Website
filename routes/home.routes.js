@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const nodemailer = require('nodemailer')
+require('dotenv').config()
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -42,15 +43,15 @@ router.post('/email', (req, res) => {
         debug : true,
         secureConnection : false,
         auth : {
-            user : 'detunjinov@gmail.com',
-            pass : '08139589883'
+            user : process.env.MAIL_ADDRESS,
+            pass : process.env.MAIL_PASS
         },
         tls : {rejectAuthorized : true}
     })
 
     const mailOptions = {
         from : req.body.email,
-        to : 'detunjinov@gmail.com',
+        to : process.env.MAIL_ADDRESS,
         subject : `Message from ${req.body.email} : ${req.body.subject}`,
         text : req.body.message
     }
